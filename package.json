@@ -1,0 +1,58 @@
+{
+    "name": "prefix-css-loader",
+    "version": "1.0.0",
+    "description": "Webpack loader to prefix css selectors",
+    "main": "src/index.js",
+    "files": [
+        "src/*"
+    ],
+    "scripts": {
+        "start": "webpack-dev-server --config webpack.config.js --mode development --bundle test --port 9090 --open",
+        "startProd": "webpack-dev-server --config webpack.config.js --mode production --bundle test --port 9090 --open",
+        "buildProd": "webpack --config webpack.config.js --mode production --bundle dist",
+        "buildDev": "webpack --config webpack.config.js --mode development --bundle dist",
+        "build": "rm -rf dist/* & npm run buildProd && npm run buildDev",
+        "pub": "node node_modules/publish-flatten --flatten dist --strip scripts --strip devDependencies"
+    },
+    "keywords": [
+        "webpack",
+        "loader",
+        "css",
+        "styles",
+        "prefix",
+        "js",
+        "javascript",
+        "css-loader"
+    ],
+    "author": "Andreas Arvidsson",
+    "license": "MIT",
+    "homepage": "https://github.com/AndreasArvidsson/prefix-css-loader",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AndreasArvidsson/prefix-css-loader.git"
+    },
+    "bugs": {
+        "url": "https://github.com/AndreasArvidsson/prefix-css-loader/issues"
+    },
+    "dependencies": {
+        "css": "^3.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "latest",
+        "@babel/preset-env": "latest",
+        "babel-eslint": "latest",
+        "babel-loader": "latest",
+        "webpack": "latest",
+        "webpack-cli": "latest",
+        "webpack-dev-server": "latest",
+        "html-loader": "latest",
+        "html-webpack-plugin": "latest",
+        "css-loader": "latest",
+        "file-loader": "latest",
+        "eslint-loader": "latest",
+        "eslint": "latest",
+        "publish-flatten": "latest",
+        "bootstrap": "latest",
+        "styles-to-js-loader": "latest"
+    }
+}

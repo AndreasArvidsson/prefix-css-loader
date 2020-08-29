@@ -1,0 +1,100 @@
+/* styles.css */
+
+@charset "utf-8";
+
+@import "styles2.css";
+
+@namespace "XML-namespace-URL";
+
+@viewport {
+    max-width: 2000px;
+}
+  
+@keyframes slidein {
+    from,
+    to {
+        color: darkgoldenrod;
+    }
+}
+
+@page {
+    size: a1;
+}
+
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src: url("font.woff2") format("woff2");
+}
+
+@-moz-document url-prefix() {
+    .document-class {
+        color: lightcoral;
+    }
+}
+
+@document url-prefix() {
+    .document-class {
+        color: lightcoral;
+    }
+}
+
+@media screen and (min-width: 100px) {
+    .media-class,
+    #media-id,
+    media-tag {
+        color: orange;
+    }
+}
+
+@supports (display: grid) {
+    .supports-class,
+    #supports-id,
+    supports-tag {
+        color: indigo;
+    }
+}
+
+@counter-style thumbs {
+    system: cyclic;
+    symbols: "\1F44D";
+    suffix: " ";
+}
+
+.test-class {
+    color: red;
+}
+
+#test-id {
+    color: green;
+}
+
+test-tag {
+    color: blue;
+}
+
+.animation-class {
+    animation-duration: 1000s;
+    animation-name: slidein;
+}
+
+.glyphicon {
+    font-family: "Glyphicons Halflings";
+    margin-left: 30px;
+    color: teal;
+}
+.glyphicon:before {
+    content: "\e125";
+}
+  
+ul {
+    list-style: thumbs;
+    color: blueviolet;
+}
+
+/* Not supported by css parser */
+/* @font-feature-values Verdana {
+    @swash { 
+        swishy: 1; 
+        flowing: 2;  
+    } 
+} */

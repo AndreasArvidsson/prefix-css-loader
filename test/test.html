@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>prefix-css-loader test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        .my-row {
+            display: flex;
+            padding-bottom: 10px;
+            height: 22px;
+        }
+        .my-row-header {
+            height: 60px;
+        }
+        .my-col {
+            flex-grow: 1;
+        }
+        ul {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="my-row my-row-header">
+        <div class="my-col">
+            <h1>Outside my-class</h1>
+        </div>
+        <div class="my-col">
+            <h1>Inside my-class</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
